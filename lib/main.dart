@@ -7,6 +7,7 @@ import 'package:flutter_example/animation/cat_animation_test.dart';
 import 'package:flutter_example/list/cache_list.dart';
 import 'package:flutter_example/push/push_page.dart';
 import 'package:flutter_example/widgets/actions_page.dart';
+import 'package:flutter_example/widgets/hero_test.dart';
 import 'package:flutter_example/widgets/swiper_wrap.dart';
 import 'package:flutter_example/widgets/transform_widget.dart';
 
@@ -105,6 +106,10 @@ class _MyHomePageState extends State<MyHomePage> {
               ListTile(
                 title: Text('actions page'),
                 onTap: () => goPage(ActionsPage()),
+              ),
+              ListTile(
+                title: Text('hero test page'),
+                onTap: () => goPage(RadialExpansionDemo()),
               ),
             ],
           ),
