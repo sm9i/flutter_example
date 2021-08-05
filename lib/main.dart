@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_example/animation/cat_animation_test.dart';
 import 'package:flutter_example/list/cache_list.dart';
@@ -12,6 +13,7 @@ import 'package:flutter_example/widgets/indicator_test.dart';
 import 'package:flutter_example/widgets/swiper_wrap.dart';
 import 'package:flutter_example/widgets/transform_widget.dart';
 
+import 'animation/custom_loading.dart';
 import 'layout/custom_multi_layout.dart';
 import 'list/sliver_list.dart';
 
@@ -45,10 +47,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       appBar: AppBar(
         title: Icon(
@@ -113,10 +113,17 @@ class _MyHomePageState extends State<MyHomePage> {
               ListTile(
                 title: Text('hero test page'),
                 onTap: () => goPage(RadialExpansionDemo()),
+                onLongPress: () {
+                  timeDilation = 1.0;
+                },
               ),
               ListTile(
                 title: Text('tab bar test page'),
                 onTap: () => goPage(TabBarPage()),
+              ),
+              ListTile(
+                title: Text('custom loading animation page'),
+                onTap: () => goPage(CustomLoadingPage()),
               ),
             ],
           ),
