@@ -8,6 +8,7 @@ import 'package:flutter_example/list/cache_list.dart';
 import 'package:flutter_example/push/push_page.dart';
 import 'package:flutter_example/widgets/actions_page.dart';
 import 'package:flutter_example/widgets/hero_test.dart';
+import 'package:flutter_example/widgets/indicator_test.dart';
 import 'package:flutter_example/widgets/swiper_wrap.dart';
 import 'package:flutter_example/widgets/transform_widget.dart';
 
@@ -44,8 +45,10 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       appBar: AppBar(
         title: Icon(
@@ -110,6 +113,10 @@ class _MyHomePageState extends State<MyHomePage> {
               ListTile(
                 title: Text('hero test page'),
                 onTap: () => goPage(RadialExpansionDemo()),
+              ),
+              ListTile(
+                title: Text('tab bar test page'),
+                onTap: () => goPage(TabBarPage()),
               ),
             ],
           ),
