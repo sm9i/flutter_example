@@ -9,6 +9,7 @@ import 'package:flutter_example/list/cache_list.dart';
 import 'package:flutter_example/navigator2/home.dart';
 import 'package:flutter_example/push/push_page.dart';
 import 'package:flutter_example/widgets/actions_page.dart';
+import 'package:flutter_example/widgets/clock/clock_page.dart';
 import 'package:flutter_example/widgets/hero_test.dart';
 import 'package:flutter_example/widgets/indicator_test.dart';
 import 'package:flutter_example/widgets/swiper_wrap.dart';
@@ -131,6 +132,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 onTap: () {
                   runApp(HomeApp());
                 },
+              ),
+              ListTile(
+                title: Text('clock page'),
+                onTap: () => goPage(ClockPage()),
               ),
             ],
           ),

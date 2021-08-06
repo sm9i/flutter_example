@@ -18,7 +18,6 @@ class ClipTestWidget extends StatelessWidget {
   }
 }
 
-
 class _CustomCLip extends CustomClipper<Path> {
   @override
   Path getClip(Size size) {

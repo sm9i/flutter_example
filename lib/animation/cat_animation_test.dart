@@ -35,7 +35,7 @@ class _CarAnimationTestPageState extends State<CarAnimationTestPage> {
     path.moveTo(current.dx, current.dy);
 
     path.quadraticBezierTo(
-        current.dx, current.dy/2 , carOffset.dx, carOffset.dy);
+        current.dx, current.dy / 2, carOffset.dx, carOffset.dy);
 
     late OverlayEntry overlayEntry;
     overlayEntry = OverlayEntry(builder: (_) {
@@ -159,31 +159,5 @@ class __PathPaintState extends State<_PathPaint>
         ),
       ),
     );
-    // final size = MediaQuery.of(context).size;
-    // return CustomPaint(
-    //   size: size,
-    //   painter: _CustomPaint(path),
-    // );
-  }
-}
-
-class _CustomPaint extends CustomPainter {
-  _CustomPaint(this.path);
-
-  final Path path;
-
-  @override
-  void paint(Canvas canvas, Size size) {
-    canvas.drawPath(
-        path,
-        Paint()
-          ..color = Colors.blue
-          ..strokeWidth = 1.0
-          ..style = PaintingStyle.stroke);
-  }
-
-  @override
-  bool shouldRepaint(covariant _CustomPaint oldDelegate) {
-    return path != oldDelegate.path;
   }
 }

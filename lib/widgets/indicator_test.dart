@@ -64,7 +64,7 @@ class RoundedUnderlineTabIndicator extends Decoration {
     this.insets = EdgeInsets.zero,
     this.radius,
     this.width,
-  })  : assert(insets != null);
+  }) : assert(insets != null);
 
   final BorderSide borderSide;
   final EdgeInsetsGeometry? insets;
@@ -114,7 +114,7 @@ class _RoundedUnderlinePainter extends BoxPainter {
     VoidCallback? onChanged, {
     @required this.radius,
     this.width,
-  })  : super(onChanged);
+  }) : super(onChanged);
 
   final double? radius;
   final double? width;

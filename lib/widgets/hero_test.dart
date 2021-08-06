@@ -36,9 +36,9 @@ class RadialExpansion extends StatelessWidget {
     required this.maxRadius,
     this.child,
   })  : clipTween = Tween<double>(
-    begin: 2.0 * minRadius,
-    end: 2.0 * (maxRadius / math.sqrt2),
-  ),
+          begin: 2.0 * minRadius,
+          end: 2.0 * (maxRadius / math.sqrt2),
+        ),
         super(key: key);
 
   final double minRadius;
@@ -182,4 +182,3 @@ class RadialExpansionDemo extends StatelessWidget {
     );
   }
 }
-

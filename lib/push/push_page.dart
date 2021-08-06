@@ -49,7 +49,6 @@ class _PusPageState extends State<PusPage> {
     updateKeyboard(context);
     return Scaffold(
       appBar: AppBar(),
-
       body: Column(
         children: <Widget>[
           Expanded(

@@ -27,8 +27,7 @@ class _CustomPaint extends CustomPainter {
     //   right: BorderSide(color: Colors.red),
     //   left: BorderSide(color: Colors.red),
     // );
-    // paintZigZag(canvas, Paint(), Offset.zero, Offset(0, 100), 10, 40);
-
+    paintZigZag(canvas, Paint(), Offset.zero, Offset(0, 100), 10, 40);
   }
 
   @override
