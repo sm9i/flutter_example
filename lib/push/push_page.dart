@@ -45,6 +45,7 @@ class _PusPageState extends State<PusPage> {
 
   @override
   Widget build(BuildContext context) {
+    RepaintBoundary();
     updateKeyboard(context);
     return Scaffold(
       appBar: AppBar(),

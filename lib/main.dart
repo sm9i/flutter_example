@@ -6,6 +6,7 @@ import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_example/animation/cat_animation_test.dart';
 import 'package:flutter_example/list/cache_list.dart';
+import 'package:flutter_example/navigator2/home.dart';
 import 'package:flutter_example/push/push_page.dart';
 import 'package:flutter_example/widgets/actions_page.dart';
 import 'package:flutter_example/widgets/hero_test.dart';
@@ -124,6 +125,12 @@ class _MyHomePageState extends State<MyHomePage> {
               ListTile(
                 title: Text('custom loading animation page'),
                 onTap: () => goPage(CustomLoadingPage()),
+              ),
+              ListTile(
+                title: Text('navigator 2 '),
+                onTap: () {
+                  runApp(HomeApp());
+                },
               ),
             ],
           ),

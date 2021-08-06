@@ -1,5 +1,3 @@
-import 'dart:math';
-import 'package:vector_math/hash.dart';
 import 'package:flutter/material.dart';
 
 class Interactive extends StatefulWidget {
