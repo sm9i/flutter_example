@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 void showBottomInput(BuildContext context) {
-  MethodChannel(name).invokeMethod(method)
   showModalBottomSheet(
     context: context,
     builder: (context) {
