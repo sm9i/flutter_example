@@ -9,6 +9,7 @@ import 'package:flutter_example/list/cache_list.dart';
 import 'package:flutter_example/navigator2/home.dart';
 import 'package:flutter_example/push/push_page.dart';
 import 'package:flutter_example/widgets/actions_page.dart';
+import 'package:flutter_example/widgets/bottom_input.dart';
 import 'package:flutter_example/widgets/clock/clock_page.dart';
 import 'package:flutter_example/widgets/hero_test.dart';
 import 'package:flutter_example/widgets/indicator_test.dart';
@@ -70,6 +71,7 @@ class _MyHomePageState extends State<MyHomePage> {
           child: ListView(
             physics: BouncingScrollPhysics(),
             children: <Widget>[
+              // ImgTestWidget(),
               ListTile(
                 title: Text('cache list positioned'),
                 onTap: () => goPage(CacheScrollPosition()),
@@ -146,6 +148,10 @@ class _MyHomePageState extends State<MyHomePage> {
               ListTile(
                 title: Text('stack position'),
                 onTap: () => goPage(StackPosition()),
+              ),
+              ListTile(
+                title: Text('show bottom input'),
+                onTap: () => showBottomInput(context),
               ),
             ],
           ),
