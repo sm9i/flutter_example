@@ -15,9 +15,11 @@ import 'package:flutter_example/widgets/indicator_test.dart';
 import 'package:flutter_example/widgets/swiper_wrap.dart';
 import 'package:flutter_example/widgets/transform_widget.dart';
 
+import 'animation/cross_fade.dart';
 import 'animation/custom_loading.dart';
 import 'layout/custom_multi_layout.dart';
 import 'list/sliver_list.dart';
+import 'widgets/stack_position.dart';
 
 void main() {
   runApp(MyApp());
@@ -136,6 +138,14 @@ class _MyHomePageState extends State<MyHomePage> {
               ListTile(
                 title: Text('clock page'),
                 onTap: () => goPage(ClockPage()),
+              ),
+              ListTile(
+                title: Text('cross fade page'),
+                onTap: () => goPage(CrossFade()),
+              ),
+              ListTile(
+                title: Text('stack position'),
+                onTap: () => goPage(StackPosition()),
               ),
             ],
           ),
