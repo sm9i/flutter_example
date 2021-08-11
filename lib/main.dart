@@ -21,6 +21,7 @@ import 'package:flutter_example/widgets/transform_widget.dart';
 import 'animation/cross_fade.dart';
 import 'animation/custom_loading.dart';
 import 'custom_fonts/custom_fonts.dart';
+import 'input/input_test.dart';
 import 'layout/custom_multi_layout.dart';
 import 'list/sliver_list.dart';
 import 'widgets/stack_position.dart';
@@ -167,6 +168,10 @@ class _MyHomePageState extends State<MyHomePage> {
               ListTile(
                 title: Text('custom fonts'),
                 onTap: () => goPage(LoadCustomFonts()),
+              ),
+              ListTile(
+                title: Text('input test '),
+                onTap: () => goPage(InputTest()),
               ),
             ],
           ),
