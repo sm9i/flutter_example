@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_example/animation/cat_animation_test.dart';
+import 'package:flutter_example/lifecycle/lifecycle_test.dart';
 import 'package:flutter_example/list/cache_list.dart';
 import 'package:flutter_example/navigator2/home.dart';
 import 'package:flutter_example/push/push_page.dart';
@@ -42,6 +43,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: MyHomePage(title: 'Flutter Demo Home Page'),
+      navigatorObservers: [RouteObserver<ModalRoute<void>>()],
     );
   }
 }
@@ -77,6 +79,10 @@ class _MyHomePageState extends State<MyHomePage> {
             children: <Widget>[
               // ImgTestWidget(),
               ListTile(
+                title: Text('lifecycle test'),
+                onTap: () => goPage(LifecyclePage()),
+              ),
+              ListTile(
                 title: Text('cache list positioned'),
                 onTap: () => goPage(CacheScrollPosition()),
               ),
@@ -98,9 +104,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   'plugin',
                   style: TextStyle(fontSize: 12),
                 ),
-                onTap: () => Platform.isAndroid
-                    ? MethodChannel('app_settings').invokeMethod('open')
-                    : null,
+                onTap: () => Platform.isAndroid ? MethodChannel('app_settings').invokeMethod('open') : null,
               ),
               ListTile(
                 title: Text('push page'),
@@ -180,6 +184,5 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
-  void goPage(Widget child) =>
-      Navigator.push(context, CupertinoPageRoute(builder: (_) => child));
+  void goPage(Widget child) => Navigator.push(context, CupertinoPageRoute(builder: (_) => child));
 }
