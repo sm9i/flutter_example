@@ -9,6 +9,7 @@ import 'package:flutter_example/lifecycle/lifecycle_test.dart';
 import 'package:flutter_example/list/cache_list.dart';
 import 'package:flutter_example/navigator2/home.dart';
 import 'package:flutter_example/push/push_page.dart';
+import 'package:flutter_example/scroll_controller/sroll_controller_page.dart';
 import 'package:flutter_example/widgets/actions_page.dart';
 import 'package:flutter_example/widgets/bottom_input.dart';
 import 'package:flutter_example/widgets/canvas_radio_rect.dart';
@@ -78,6 +79,10 @@ class _MyHomePageState extends State<MyHomePage> {
             physics: BouncingScrollPhysics(),
             children: <Widget>[
               // ImgTestWidget(),
+              ListTile(
+                title: Text('scroll controller test'),
+                onTap: () => goPage(ScrollControllerPage()),
+              ),
               ListTile(
                 title: Text('lifecycle test'),
                 onTap: () => goPage(LifecyclePage()),
