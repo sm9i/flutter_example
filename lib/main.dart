@@ -14,6 +14,7 @@ import 'package:flutter_example/widgets/actions_page.dart';
 import 'package:flutter_example/widgets/bottom_input.dart';
 import 'package:flutter_example/widgets/canvas_radio_rect.dart';
 import 'package:flutter_example/widgets/clock/clock_page.dart';
+import 'package:flutter_example/widgets/frame_image.dart';
 import 'package:flutter_example/widgets/hero_test.dart';
 import 'package:flutter_example/widgets/indicator_test.dart';
 import 'package:flutter_example/widgets/ratio_progress_widget.dart';
@@ -79,6 +80,10 @@ class _MyHomePageState extends State<MyHomePage> {
             physics: BouncingScrollPhysics(),
             children: <Widget>[
               // ImgTestWidget(),
+              ListTile(
+                title: Text('frame image test'),
+                onTap: () => goPage(FrameImagePage()),
+              ),
               ListTile(
                 title: Text('scroll controller test'),
                 onTap: () => goPage(ScrollControllerPage()),
