@@ -7,6 +7,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_example/animation/cat_animation_test.dart';
 import 'package:flutter_example/lifecycle/lifecycle_test.dart';
 import 'package:flutter_example/list/cache_list.dart';
+import 'package:flutter_example/list/refresh_page.dart';
 import 'package:flutter_example/navigator2/home.dart';
 import 'package:flutter_example/push/push_page.dart';
 import 'package:flutter_example/scroll_controller/sroll_controller_page.dart';
@@ -80,6 +81,10 @@ class _MyHomePageState extends State<MyHomePage> {
             physics: BouncingScrollPhysics(),
             children: <Widget>[
               // ImgTestWidget(),
+              ListTile(
+                title: Text('refresh test'),
+                onTap: () => goPage(RefreshPage()),
+              ),
               ListTile(
                 title: Text('frame image test'),
                 onTap: () => goPage(FrameImagePage()),
