@@ -10,6 +10,7 @@ import 'package:flutter_example/list/cache_list.dart';
 import 'package:flutter_example/list/refresh_page.dart';
 import 'package:flutter_example/navigator2/home.dart';
 import 'package:flutter_example/push/push_page.dart';
+import 'package:flutter_example/rotate/rotate_page.dart';
 import 'package:flutter_example/scroll_controller/sroll_controller_page.dart';
 import 'package:flutter_example/widgets/actions_page.dart';
 import 'package:flutter_example/widgets/bottom_input.dart';
@@ -81,6 +82,10 @@ class _MyHomePageState extends State<MyHomePage> {
             physics: BouncingScrollPhysics(),
             children: <Widget>[
               // ImgTestWidget(),
+              ListTile(
+                title: Text('rotate test'),
+                onTap: () => goPage(RotatePage()),
+              ),
               ListTile(
                 title: Text('refresh test'),
                 onTap: () => goPage(RefreshPage()),
