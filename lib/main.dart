@@ -18,8 +18,10 @@ import 'package:flutter_example/widgets/canvas_radio_rect.dart';
 import 'package:flutter_example/widgets/clock/clock_page.dart';
 import 'package:flutter_example/widgets/frame_image.dart';
 import 'package:flutter_example/widgets/hero_test.dart';
+import 'package:flutter_example/widgets/img_test.dart';
 import 'package:flutter_example/widgets/indicator_test.dart';
 import 'package:flutter_example/widgets/ratio_progress_widget.dart';
+import 'package:flutter_example/widgets/star_widget.dart';
 import 'package:flutter_example/widgets/swiper_wrap.dart';
 import 'package:flutter_example/widgets/transform_widget.dart';
 
@@ -82,6 +84,10 @@ class _MyHomePageState extends State<MyHomePage> {
             physics: BouncingScrollPhysics(),
             children: <Widget>[
               // ImgTestWidget(),
+              ListTile(
+                title: Text('star test'),
+                onTap: () => goPage(StarWidget()),
+              ),
               ListTile(
                 title: Text('rotate test'),
                 onTap: () => goPage(RotatePage()),
