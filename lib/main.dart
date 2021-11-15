@@ -9,6 +9,7 @@ import 'package:flutter_example/lifecycle/lifecycle_test.dart';
 import 'package:flutter_example/list/cache_list.dart';
 import 'package:flutter_example/list/refresh_page.dart';
 import 'package:flutter_example/navigator2/home.dart';
+import 'package:flutter_example/net/page/net_page.dart';
 import 'package:flutter_example/push/push_page.dart';
 import 'package:flutter_example/rotate/rotate_page.dart';
 import 'package:flutter_example/scroll_controller/sroll_controller_page.dart';
@@ -20,7 +21,7 @@ import 'package:flutter_example/widgets/frame_image.dart';
 import 'package:flutter_example/widgets/hero_test.dart';
 import 'package:flutter_example/widgets/img_test.dart';
 import 'package:flutter_example/widgets/indicator_test.dart';
-import 'package:flutter_example/widgets/ratio_progress_widget.dart';
+import 'package:flutter_example/widgets/progress/ratio_progress_widget.dart';
 import 'package:flutter_example/widgets/star_widget.dart';
 import 'package:flutter_example/widgets/swiper_wrap.dart';
 import 'package:flutter_example/widgets/transform_widget.dart';
@@ -84,6 +85,10 @@ class _MyHomePageState extends State<MyHomePage> {
             physics: BouncingScrollPhysics(),
             children: <Widget>[
               // ImgTestWidget(),
+              ListTile(
+                title: Text('net test'),
+                onTap: () => goPage(NetPage()),
+              ),
               ListTile(
                 title: Text('star test'),
                 onTap: () => goPage(StarWidget()),

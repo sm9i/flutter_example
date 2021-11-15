@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_example/widgets/canvas_radio_rect.dart';
+import 'package:flutter_example/widgets/progress/wave_progress_widget.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
 class RatioProgressPage extends StatelessWidget {
@@ -10,7 +11,12 @@ class RatioProgressPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(),
       body: Center(
-        child: _RatioProgressWidget(),
+        child: Column(
+          children: [
+            _RatioProgressWidget(),
+            WaveProgressWidget(),
+          ],
+        ),
       ),
     );
   }
